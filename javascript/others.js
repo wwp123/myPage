@@ -71,7 +71,7 @@ $(function(){
 	//模板风格切换
 	var $changeStyle = $("#change-style"),$post = $("#post");
 	var index = 1;
-	var astyle = new Array("large-block-grid-2 medium-block-grid-1","large-block-grid-3 medium-block-grid-2","large-block-grid-4 medium-block-grid-3","list-style");
+	var astyle = new Array("large-block-grid-2 medium-block-grid-2","large-block-grid-3 medium-block-grid-3","large-block-grid-4 medium-block-grid-4","list-style");
 	var	atext = new Array("布局A","布局B","布局C","布局D");
 	$changeStyle.text(atext[0]);
 	$post.addClass(astyle[0]);
