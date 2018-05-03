@@ -1228,7 +1228,7 @@ ul.p-listyle li{ line-height:1.625rem;}
 /*头部*/
 .header{
     padding: 60px 0px;
-    width: 33% !important;
+    width: 25% !important;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -1265,34 +1265,6 @@ ul.p-listyle li{ line-height:1.625rem;}
     line-height: 38px;
     letter-spacing: 2px;
 }
-//.top-bar-section{
-//  text-align: center;
-//}
-//.top-bar-section li{
-//  display: inline-block;
-//  margin: 6px 10px;
-//}
-//.top-bar-section li a{
-//  color: #c5c5c5;
-//  font-size: 12px;
-//  white-space: nowrap;
-//}
-//.top-bar-section li a:hover{
-//  color: @primary-color;
-//  text-decoration: underline;
-//}
-//.top-bar-section .search{
-//  display: none;
-//  position: relative;
-//}
-//.top-bar-section .search .inp{
-//  height: 2rem;
-//}
-//.top-bar-section .search .fa-search{
-//  position: absolute;
-//  right: 5px;
-//  top: 8px;
-//}
 
 .control-btn{
     position: fixed;
@@ -1316,8 +1288,25 @@ ul.p-listyle li{ line-height:1.625rem;}
     color: #fff;
 }
 .control-btn a span{font-size: 14px;}
-.main{padding: 40px 2% 0 35%;}
+.main{padding: 40px 2% 0 27%;}
 .relative {position: relative;}
+#instal.f-open-dropdown {
+  position: fixed !important;
+  left:auto !important;
+  top: 40px !important;
+  padding: 10px 15px;
+}
+#instal.f-open-dropdown:after {
+  left: auto;
+  right: 7px;
+}
+#instal.f-open-dropdown:before {
+  left: auto;
+  right: 8px;
+}
+@media only screen and (min-width: 641px) {
+  #instal.f-open-dropdown {right: 20px;}
+}
 @media only screen and (max-width: 768px) {
     .header {
         padding: 45px 0px 20px;
@@ -1371,7 +1360,7 @@ ul.p-listyle li{ line-height:1.625rem;}
 }
 .info-box .date {
     font-size: 14px;
-    color: #5c5c5c;
+    color: @base-font-color;
 }
 .more-box p{
     font-size: 14px;
@@ -1460,14 +1449,12 @@ ul.p-listyle li{ line-height:1.625rem;}
     margin-top: 4px;
     box-shadow: 0 0 1px rgba(0,0,0,.3);
 }
-.instal-img li label{
-    margin-left: 6px;
-}
 .instal-img li label img{
     display: block;
     width: 50px;
     height: 50px;
     margin-top: -8px;
+    margin-left: 6px;
     box-shadow: 0 0 1px rgba(0,0,0,.3);
 }
 .f-dropdown .instal-color li,

@@ -31,7 +31,7 @@
 					<a href=""><img src="images/portrait.jpg" title="头像" alt="头像" /></a>
 				</div>
 				<h1 class="name">wwp123</h1>
-				<div class="saying">如果敌人让你生气，那说明你没有战胜他的把握。</div>
+				<div class="saying">做聪明勤奋快乐开心的搬运工。</div>
 			</div>
 		</div>
 		<div class="main">
@@ -42,6 +42,14 @@
 			<div id="instal" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
 				<div class="title">背景图片</div>
 				<ul class="instal-img">
+						<li>
+								<label class="rc-box">
+									<input type="radio" name="default-img" id="img1"/>
+									<label for="img1">
+										<img src="images/banner-bg.jpg" />
+									</label>
+								</label>
+							</li>
 					<li>
 						<label class="rc-box">
 							<input type="radio" name="default-img" id="img2"/>
@@ -63,18 +71,7 @@
 				<ul class="instal-color">
 					<li>
 						<label class="rc-box">
-						<input type="radio" name="default-color" id="d1" />
-							<label for="d1">
-								<span style="background-color: #FFFFCC;"></span>
-								<span style="background-color: #99CCCC;"></span>
-								<span style="background-color: #CCFFCC;"></span>
-								<span style="background-color: #333;"></span>
-							</label>
-						</label>
-					</li>
-					<li>
-						<label class="rc-box">
-						<input type="radio" name="default-color" id="d2"/>
+						<input type="radio" name="default-color" id="d1"/>
 							<label for="d2">
 								<span style="background-color: #CCCCFF;"></span>
 								<span style="background-color: #CCFFFF;"></span>
@@ -85,7 +82,7 @@
 					</li>
 					<li>
 						<label class="rc-box">
-						<input type="radio" name="default-color" id="d3"/>
+						<input type="radio" name="default-color" id="d2"/>
 							<label for="d3">
 								<span style="background-color: #CCFF99;"></span>
 								<span style="background-color: #006600;"></span>
@@ -96,7 +93,7 @@
 					</li>
 					<li>
 						<label class="rc-box">
-						<input type="radio" name="default-color" id="d4" />
+						<input type="radio" name="default-color" id="d3" />
 							<label for="d4">
 								<span style="background-color: #333333;"></span>
 								<span style="background-color: #CCCC99;"></span>
@@ -107,7 +104,7 @@
 					</li>
 					<li>
 						<label class="rc-box">
-						<input type="radio" name="default-color" id="d5"/>
+						<input type="radio" name="default-color" id="d4"/>
 							<label for="d5">
 								<span style="background-color: #fff673;"></span>
 								<span style="background-color: #ffc500;"></span>
@@ -118,7 +115,7 @@
 					</li>
 					<li>
 						<label class="rc-box">
-						<input type="radio" name="default-color" id="d6"/>
+						<input type="radio" name="default-color" id="d5"/>
 							<label for="d6">
 								<span style="background-color: #FFFFCC;"></span>
 								<span style="background-color: #FFCCCC;"></span>
@@ -127,14 +124,42 @@
 							</label>
 						</label>
 					</li>
+					<li>
+						<label class="rc-box">
+						<input type="radio" name="default-color" id="d6" />
+							<label for="d1">
+								<span style="background-color: #f4f4f4;"></span>
+								<span style="background-color: #5acdb3;"></span>
+								<span style="background-color: #fafafa;"></span>
+								<span style="background-color: #333;"></span>
+							</label>
+						</label>
+					</li>
 				</ul>
 			</div>
 			<div class="row">
 				<ul class="post" id="post">
+						<li class="postitem">
+								<a target="_blank" href="https://wwp123.github.io/todo/dist/" class="relative">
+									<div class="more-box">
+										<p>使用vue构造界面，使用stylus编写样式，并使用webpack进行打包。</p>
+										<p>难点在于：刚开始安装了最新版本的webpack（4.6.0），用extract-text-webpack-plugin进行样式分离打包，而v4已经有了新的mini-css-extract-plugin插件了，所以说要经常关注更新，不能让自己落后。</p>
+									</div>
+									<div class="info-box clearfix">
+										<div class="img"><img src="images/todo.png" alt="todo应用预览图" /></div>
+										<div class="text">
+											<h2 class="title">todo应用</h2>
+											<span class="date">2018.3</span>
+										</div>
+									</div>
+								</a>
+							</li>
 					<li class="postitem">
 						<a target="_blank" href="https://wwp123.github.io/audio/html/index.html" class="relative">
 							<div class="more-box">
-								<p>音频组件</p>
+								<p>用H5的audio标签写的一个音频组件，放弃audio自带的控件，通过自己写的控件来获取音频的信息并控制音频的播放。</p>
+								<p>难点在于：ios10和ios11是点了播放按钮后才开始加载音频，导致出现时间延迟。</p>
+								<p>解决方法：通过判断音频的readyState，若小于2则说明当前播放位置的数据是不可用的，故加个loading效果。通过判断音频的canplay去掉loading效果，注意ios10和ios11执行的是canplaythrough事件。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/audio.png" alt="音频组件预览图" /></div>
@@ -146,9 +171,10 @@
 						</a>
 					</li>
 					<li class="postitem">
-						<a target="_blank" href="javascript:;" class="relative">
+						<a target="_blank" href="https://github.com/wwp123/shopping2" class="relative">
 							<div class="more-box">
-								<p>这是个微信小程序项目</p>
+								<p>使用微信小程序API做的一个商城小程序项目。</p>
+								<p>通过app.json来对当前小程序进行全局配置，包括所有页面路径、界面表现、底部tab等，通过project.config.json进行工具配置，WXML充当html的角色，WXSS充当css的角色，以及通过js进行逻辑交互。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/wx.png" alt="商城小程序请下载代码并放入微信编辑器中进行预览" /></div>
@@ -162,7 +188,7 @@
 					<li class="postitem">
 						<a target="_blank" href="javascript:;" class="relative">
 							<div class="more-box">
-								<p>企业健康管家</p>
+								<p>企业健康管家是使用h5+css3开发的一个移动端项目，产品包含两个主题色，默认蓝色，个人中心和健康模块采用红色。使用jq制作交互效果，使用swiper实现轮播图，使用echarts制作图表，图标使用阿里云矢量图标。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/healthServe.png" alt="移动端页面请扫描二维码进行预览" /></div>
@@ -176,7 +202,7 @@
 					<li class="postitem">
 						<a target="_blank" href="javascript:;" class="relative">
 							<div class="more-box">
-								<p>爱健康</p>
+								<p>爱健康是使用h5+css3开发的一个移动端项目，产品分为医生端、患者端和上门服务系统三大块。使用jq制作交互效果，使用swiper实现轮播图，使用echarts制作图表，图标使用阿里云矢量图标。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/iHealth.png" alt="移动端页面请扫描二维码进行预览" /></div>
@@ -190,12 +216,12 @@
 					<li class="postitem">
 						<a target="_blank" href="https://wwp123.github.io/recruit/html/%E6%8B%9B%E8%81%98-%E9%A6%96%E9%A1%B5.html" class="relative">
 							<div class="more-box">
-								<p>健康之路招聘系统</p>
+								<p>健康之路招聘系统个pc端项目，兼容到ie8</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/recruit.png" alt="招聘页面预览图" /></div>
 								<div class="text">
-									<h2 class="title">招聘</h2>
+									<h2 class="title">健康之路招聘系统</h2>
 									<span class="date">2017.5</span>
 								</div>
 							</div>
@@ -204,7 +230,10 @@
 					<li class="postitem">
 						<a target="_blank" href="http://www.fjdzj.gov.cn/" class="relative">
 							<div class="more-box">
-								<p>出来创业后接的第三个项目。是个政府项目。</p>
+								<p>福建省地震局是个响应式项目。响应式布局使用foundation,主题样式使用less,地图使用百度地图api，轮播图使用swiper,交互效果使用jquery。</p>
+								<p>此项目导入公司cms平台，并参与了部分实施。</p>
+								<p>难点在于：轮播图采用大图和小图双向绑定，并且在ipad等设备上横竖屏切换时，小图的位置由大图的侧边转到大图的下方，这导致小图的滑动方向产生了变化。</p>
+								<p>解决方法：通过resize判断横竖屏切换，并重新设置小图的滑动方向。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/fjsdzj.png" alt="福建省地震局页面预览图" /></div>
@@ -218,7 +247,9 @@
 					<li class="postitem">
 						<a target="_blank" href="http://cms.jiefeng.me:88/st/190001" class="relative">
 							<div class="more-box">
-								<p>出来创业后接的第二个项目。是个广告类电商网站。</p>
+								<p>福州山水河广告有限公司项目是个广告类电商网站。响应式布局使用foundation,轮播图使用swiper。</p>
+								<p>难点在于：此项目无设计稿。</p>
+								<p>解决方法：参考其他广告类网站。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/sshad.png" alt="福州山水河广告有限公司" /></div>
@@ -232,7 +263,7 @@
 					<li class="postitem">
 						<a target="_blank" href="http://www.topkeeping.cc" class="relative">
 							<div class="more-box">
-								<p>出来创业后接的第一个项目。是个在国外批发鞋子的电商网站，因为是国外的网站，所以加载起来可能有点慢。</p>
+								<p>topkeeping是个在国外批发鞋子的电商网站。响应式布局使用foundation,图片放大使用jqzoom。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/topkeeping.png" alt="topkeeping" /></div>
@@ -246,7 +277,9 @@
 					<li class="postitem">
 						<a target="_blank" href="https://wwp123.github.io/waterfall/" class="relative">
 							<div class="more-box">
-								<p>模仿花瓣网做的瀑布流页面。</p>
+								<p>模仿花瓣网做的瀑布流页面。响应式布局使用foundation，动画效果使用masonry，使用json制造假数据，并使用ajax请求数据。</p>
+								<p>难点在于：实现同一个页面三个瀑布流的共存。</p>
+								<p>解决方法：使用三个id,分别请求不同的json数据。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/waterfall.png" alt="瀑布流" /></div>
@@ -261,6 +294,7 @@
 						<a target="_blank" href="https://wwp123.github.io/light/" class="relative">
 							<div class="more-box">
 								<p>个人主页共三套模板。这三套模板共用一个html，只是样式不同。可变换布局和主题。</p>
+								<p>难点在于：使用同一套html会产生极大的冗余。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/light.png" alt="个人主页一预览图" /></div>
@@ -275,6 +309,7 @@
 						<a target="_blank" href="https://wwp123.github.io/snow/" class="relative">
 							<div class="more-box">
 								<p>个人主页共三套模板。这三套模板共用一个html，只是样式不同。可变换布局和主题。</p>
+								<p>难点在于：使用同一套html会产生极大的冗余。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/snow.png" alt="个人主页二" /></div>
@@ -289,6 +324,7 @@
 						<a target="_blank" href="https://wwp123.github.io/travel/" class="relative">
 							<div class="more-box">
 								<p>个人主页共三套模板。这三套模板共用一个html，只是样式不同。可变换布局和主题。</p>
+								<p>难点在于：使用同一套html会产生极大的冗余。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/travel.png" alt="个人主页三" /></div>
@@ -302,7 +338,7 @@
 					<li class="postitem">
 						<a target="_blank" href="https://wwp123.github.io/leiphone/" class="relative">
 							<div class="more-box">
-								<p>在榕基实习转试用的考核项目。</p>
+								<p>仿雷锋网页面是个响应式网站。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/leiphone.png" alt="仿雷锋网页面预览图" /></div>
@@ -316,7 +352,7 @@
 					<li class="postitem">
 						<a target="_blank" href="https://wwp123.github.io/one/" class="relative">
 							<div class="more-box">
-								<p>进入榕基实习做的第一个模板。</p>
+								<p>仿腾讯网页面。</p>
 							</div>
 							<div class="info-box clearfix">
 								<div class="img"><img src="images/tencent.png" alt="仿腾讯网" /></div>
